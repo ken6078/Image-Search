@@ -12,12 +12,12 @@ class keyword_search():
             try:
                 return self.zh_dict[keyword]
             except KeyError:
-                return "關鍵字不存在!"
+                raise KeyError("關鍵字不存在!")
         elif re.search(r'[a-z]+',keyword):
             try:
                 return self.eng_dict[keyword]
             except KeyError:
-                return "Keyword does not exist."
+                raise KeyError("Keyword does not exist.")
         else:
             return "輸入格式錯誤"
 
