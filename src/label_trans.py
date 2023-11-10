@@ -2,7 +2,7 @@ import pandas as pd
 import re
 class keyword_search():
     def __init__(self):
-        self.df = pd.read_excel('./data_label.xlsx')
+        self.df = pd.read_excel('./assets/data_label.xlsx')
         self.df["DisplayName"] = self.df["DisplayName"].str.lower()
         
         self.eng_dict = dict(zip(self.df["DisplayName"],self.df["LabelName"]))
@@ -21,8 +21,3 @@ class keyword_search():
         else:
             return "輸入格式錯誤"
 
-
-seacher = keyword_search()
-keyword = str(input()).lower()
-result = seacher.search(keyword)
-print(result)
