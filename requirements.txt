@@ -1,2 +1,4 @@
 pytest
 Pillow
+pandas
+openpyxl
