@@ -19,5 +19,5 @@ class keyword_search():
             except KeyError:
                 raise KeyError("Keyword does not exist.")
         else:
-            return "輸入格式錯誤"
+            raise KeyError("輸入格式錯誤")
 
