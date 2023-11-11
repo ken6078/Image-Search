@@ -34,9 +34,7 @@ class Pick_image():
             resultIMageURLs.append(self.images[imageID][1])
         return resultIMageURLs
 
-    def pick_images_with_image(self, image: Image, seed: int = None):
-        if type(seed) == int:
-            random.seed(seed)
+    def pick_images_with_image(self, image: Image):
         image = image.resize((8, 8), Image.Resampling.LANCZOS).convert('L')
         hash = average_hash(image)
         result = []
