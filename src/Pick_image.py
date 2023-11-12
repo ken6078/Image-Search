@@ -28,7 +28,7 @@ class Pick_image():
         if type(seed) == int:
             random.seed(seed)
         labelName = self.keyword_search.search(keyword)
-        resultImageIDs = random.sample(self.labels[labelName], 20)
+        resultImageIDs = random.sample(self.labels[labelName], 10)
         resultIMageURLs = []
         for imageID in resultImageIDs:
             resultIMageURLs.append(self.images[imageID][1])
