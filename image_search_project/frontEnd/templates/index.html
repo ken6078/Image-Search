@@ -4,5 +4,13 @@
   </head>
   <body>
     <p>Hello there!</p>
+    {% block content %}
+    <h1>Local Library Home</h1>
+    <ul>
+        {% for imageURL in keyword_resultIMageURLs %}
+          <li>{{ imageURL }}</li>
+        {% endfor %}
+    </ul>
+  {% endblock %}
   </body>
 </html>

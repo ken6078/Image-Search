@@ -5,4 +5,9 @@ from django.shortcuts import render
 
 def index(request):
     """View function for home page of site."""
-    return render(request,"index.html",locals())
+    context = {
+        'keyword_resultIMageURLs': ['pick_images_with_keyword WORK!','pick_images_with_keyword WORK2!'],
+        'image_resultIMageURLs': ['pick_images_with_image_resultIMageURLs WORK!', 'pick_images_with_image_resultIMageURLs WORK2!'],
+    }
+    
+    return render(request, "index.html", context=context)
