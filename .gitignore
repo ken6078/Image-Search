@@ -131,3 +131,7 @@ dmypy.json
 
 # Vscode
 .vscode/
+
+#Upload image
+image_search_project/frontEnd/assets/uploaded_image_*.jpg
+image_search_project/frontEnd/assets/uploaded_image.jpg
