@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>   
-  </head>
-  <body>
-    <p>Hello there!</p>
-    {% block content %}
+<head>   
+</head>
+<body>
+  <p>Hello there!</p>
+  {% block content %}
     <h1>Local Library Home</h1>
+    
+    <h2>Keyword Results</h2>
     <ul>
-        {% for imageURL in keyword_resultIMageURLs %}
-          <li>{{ imageURL }}</li>
-        {% endfor %}
+      {% for imageURL in keyword_resultIMageURLs %}
+      <img src={{ imageURL }} style="width:500px;height:600px;">
+      {% endfor %}
+    </ul>
+
+    <h2>Image Results</h2>
+    <ul>
+      {% for imageURL in image_resultIMageURLs %}
+        <img src={{ imageURL }} style="width:500px;height:600px;">
+      {% endfor %}
     </ul>
   {% endblock %}
-  </body>
+</body>
 </html>
