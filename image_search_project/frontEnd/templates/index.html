@@ -4,8 +4,6 @@
     <title>Image-Search</title>
     {% load bootstrap5 %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" integrity="sha384-rGg5LjZlB2Vc/bJS6QZahXXxgB2RSx9bFSsN1eFO1NJCm2b0Dg1srqNc9H5zh21N" crossorigin="anonymous">
-</head>
 <body>
     <style>
         .carousel-item img {
@@ -14,7 +12,7 @@
           margin: 0 auto; /* Center the image horizontally */
         }
     </style>
-    <h2 class="d-flex justify-content-center">Welcome Image-Search Website!</h1>
+    <h2 class="d-flex justify-content-center" style="background-color: black; color: white; padding: 5px; box-shadow: 0 0 3px 0px black;">Welcome Image-Search Website!</h2>
     <form action="/frontEnd/" method="POST" class="d-flex justify-content-center container">
         {% csrf_token %}
         
